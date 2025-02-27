@@ -15,14 +15,14 @@
       <h2>Cursos</h2>
       <form class="form new-course">
         <div class="form__group">
-          <label class="form__label">Nombre: </label>
-          <input class="form__control" type="text" name="nombre" id="curso" placeholder="Nombre del curso" />
+          <label for="name" class="form__label">Nombre: </label>
+          <input class="form__control" type="text" name="nombre" id="name" placeholder="Nombre del curso" required />
         </div>
         <div class="form__group form__buttons">
-          <button class="form__button" type="submit">Crear curso</button>
+          <button class="form__button" type="submit" id="name">Crear curso</button>
         </div>
       </form>
-      <span class="counter">Total: 0 cursos</span>
+      Total: <span class="counter"> 0 </span> cursos
       <table class="table courses">
         <thead>
           <tr>
