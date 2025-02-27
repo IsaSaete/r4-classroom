@@ -37,9 +37,12 @@ export const addStudent = (
   students.push(newStudent);
 };
 
-// Crea una función para eliminar un estudiante de la lista de estudiantes
-// La función debe recibir un array de estudiantes y el id del estudiante a eliminar
-// export const deleteStudent =
+export const deleteStudent = (students: Student[], id: number): void => {
+  const student = students.find((student) => student.id === id);
+  if (student) {
+    students.splice(student.id - 1, 1);
+  }
+};
 
 // Crea una función para obtener las opciones de estudiantes para rellenar un select
 // La función debe recibir un array de estudiantes
