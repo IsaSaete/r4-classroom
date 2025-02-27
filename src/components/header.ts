@@ -1,10 +1,9 @@
 export const renderHeader = () => {
   const header = document.createElement("header");
-
+  header.classList.add("main-header");
   const currentUrl = new URL(window.location.href);
 
   header.innerHTML = `
-    <header class="main-header">
       <div class="container">
         <h1>Classroom</h1>
         <nav class="main-navigation">
@@ -25,7 +24,7 @@ export const renderHeader = () => {
           </ul>
         </nav>
       </div>
-    </header>
+   
   `;
 
   document.body.prepend(header);
