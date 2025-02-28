@@ -5,12 +5,9 @@ import { generateId } from "../../utils.js";
 
 export const getCoursesTotal = (courses: Course[]): number => courses.length;
 
-// Crea una función para añadir un curso a la lista de cursos
-// La función debe recibir un array de cursos y el nombre del curso a añadir
-// Si el curso ya existe en la lista, muestra un error con showErrorModal
 export const addCourse = (courses: Course[], name: string): void => {
-  const courseExist = courses.some((course) => course.name === name);
-  if (courseExist) {
+  const isCourseFound = courses.some((course) => course.name === name);
+  if (isCourseFound) {
     showErrorModal("El curso ya existe");
     return;
   }

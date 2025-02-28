@@ -15,13 +15,13 @@ export const addStudent = (
   email: string,
   phone: string
 ): void => {
-  const studentExists = students.some(
+  const isStudentFound = students.some(
     (student) =>
       student.name === name &&
       student.lastName === lastName &&
       student.email === email
   );
-  if (studentExists) {
+  if (isStudentFound) {
     showErrorModal("El estudiante ya existe");
     return;
   }
@@ -38,10 +38,9 @@ export const addStudent = (
 };
 
 export const deleteStudent = (students: Student[], id: number): void => {
-  const student = students.find((student) => student.id === id);
-  if (student) {
-    students.splice(student.id - 1, 1);
-  }
+  const indexStudent = students.findIndex((student) => student.id == id);
+
+  students.splice(indexStudent, 1);
 };
 
 // Crea una función para obtener las opciones de estudiantes para rellenar un select
