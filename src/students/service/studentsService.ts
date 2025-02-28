@@ -33,7 +33,7 @@ export const addStudent = (
 };
 
 export const deleteStudent = (students: Student[], id: number): void => {
-  const indexStudent = students.findIndex((student) => student.id == id);
+  const indexStudent = students.findIndex((student) => student.id === id);
 
   students.splice(indexStudent, 1);
 };
