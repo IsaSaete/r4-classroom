@@ -15,12 +15,7 @@ export const addStudent = (
   email: string,
   phone: string
 ): void => {
-  const isStudentFound = students.some(
-    (student) =>
-      student.name === name &&
-      student.lastName === lastName &&
-      student.email === email
-  );
+  const isStudentFound = students.some((student) => student.email === email);
   if (isStudentFound) {
     showErrorModal("El estudiante ya existe");
     return;
