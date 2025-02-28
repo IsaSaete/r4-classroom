@@ -15,19 +15,28 @@
       <h2>Notas</h2>
       <form class="form new-grade">
         <div class="form__group">
-          <label class="form__label">Estudiante: </label>
+          <labe for="student" class="form__label">Estudiante: </labe>
+          <select class="form__control" name="student" id="student" required>
+            <option value="">Selecciona un estudiante</option>
+          </select>
         </div>
         <div class="form__group">
           <label class="form__label">Curso: </label>
+          <select class="form__control" name="course" id=" course" requiered>
+            <option value="">Selecciona un curso</option>
+          </select>
+
         </div>
         <div class="form__group">
-          <label class="form__label">Nota: </label>
+          <label for="grade" class="form__label">Nota: </label>
+          <input class="form__control" type="number" min="0" max="10" name="grade" id="grade"
+            placeholder="Introduce la nota" required />
         </div>
         <div class="form__group form__buttons">
-          <button class="form__button" type="button">Crear nota</button>
+          <button class="form__button" type="submit">Crear nota</button>
         </div>
       </form>
-      Total: 0 notas
+      Total: <span class="counter">0</span> notas
       <table class="table grades">
         <thead>
           <tr>
