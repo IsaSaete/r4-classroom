@@ -36,3 +36,8 @@ export type currentStudent = {
   name: string;
   lastName: string;
 };
+
+export type CurrentCourse = {
+  id: number;
+  name: string;
+};
