@@ -41,3 +41,9 @@ export type CurrentCourse = {
   id: number;
   name: string;
 };
+export type GradeFullData = {
+  grade: Grade;
+  studentName: string;
+  studentLastName: string;
+  courseName: string;
+};
